@@ -1,0 +1,453 @@
+{
+  "fonts": [
+    {
+      "cap_height_declared": null,
+      "cap_height_measured": 1493,
+      "codepoint_count": 5918,
+      "family": "DejaVu Sans",
+      "glyph_count": 6253,
+      "gpos_feature_count": 3,
+      "gsub_feature_count": 13,
+      "kern_pair_count": 2727,
+      "license": "Bitstream Vera Fonts License, plus public domain additions (Arev)",
+      "os2_version": 1,
+      "outline_format": "glyf",
+      "slug": "dejavu-sans",
+      "subfamily": "Book",
+      "units_per_em": 2048,
+      "x_height_declared": null,
+      "x_height_declared_permille": null,
+      "x_height_measured": 1120,
+      "x_height_measured_permille": 546.9
+    },
+    {
+      "cap_height_declared": null,
+      "cap_height_measured": 1493,
+      "codepoint_count": 3447,
+      "family": "DejaVu Serif",
+      "glyph_count": 3528,
+      "gpos_feature_count": 3,
+      "gsub_feature_count": 8,
+      "kern_pair_count": 1367,
+      "license": "Bitstream Vera Fonts License, plus public domain additions (Arev)",
+      "os2_version": 1,
+      "outline_format": "glyf",
+      "slug": "dejavu-serif",
+      "subfamily": "Book",
+      "units_per_em": 2048,
+      "x_height_declared": null,
+      "x_height_declared_permille": null,
+      "x_height_measured": 1063,
+      "x_height_measured_permille": 519.0
+    },
+    {
+      "cap_height_declared": 1341,
+      "cap_height_measured": 1341,
+      "codepoint_count": 2321,
+      "family": "Liberation Serif",
+      "glyph_count": 2602,
+      "gpos_feature_count": 2,
+      "gsub_feature_count": 4,
+      "kern_pair_count": 867,
+      "license": "SIL Open Font License 1.1",
+      "os2_version": 3,
+      "outline_format": "glyf",
+      "slug": "liberation-serif",
+      "subfamily": "Regular",
+      "units_per_em": 2048,
+      "x_height_declared": 940,
+      "x_height_declared_permille": 459.0,
+      "x_height_measured": 940,
+      "x_height_measured_permille": 459.0
+    },
+    {
+      "cap_height_declared": 1433,
+      "cap_height_measured": 1433,
+      "codepoint_count": 2164,
+      "family": "Lato",
+      "glyph_count": 3023,
+      "gpos_feature_count": 2,
+      "gsub_feature_count": 20,
+      "kern_pair_count": 405928,
+      "license": "SIL Open Font License 1.1",
+      "os2_version": 3,
+      "outline_format": "glyf",
+      "slug": "lato",
+      "subfamily": "Regular",
+      "units_per_em": 2000,
+      "x_height_declared": 1013,
+      "x_height_declared_permille": 506.5,
+      "x_height_measured": 1013,
+      "x_height_measured_permille": 506.5
+    },
+    {
+      "cap_height_declared": 693,
+      "cap_height_measured": 693,
+      "codepoint_count": 1193,
+      "family": "Ubuntu",
+      "glyph_count": 1843,
+      "gpos_feature_count": 3,
+      "gsub_feature_count": 20,
+      "kern_pair_count": 161054,
+      "license": "Ubuntu Font Licence 1.0",
+      "os2_version": 4,
+      "outline_format": "glyf",
+      "slug": "ubuntu-variable",
+      "subfamily": "Regular",
+      "units_per_em": 1000,
+      "x_height_declared": 518,
+      "x_height_declared_permille": 518.0,
+      "x_height_measured": 518,
+      "x_height_measured_permille": 518.0
+    },
+    {
+      "cap_height_declared": 714,
+      "cap_height_measured": 714,
+      "codepoint_count": 3367,
+      "family": "Noto Sans Mono",
+      "glyph_count": 3787,
+      "gpos_feature_count": 2,
+      "gsub_feature_count": 15,
+      "kern_pair_count": 0,
+      "license": "SIL Open Font License 1.1",
+      "os2_version": 4,
+      "outline_format": "glyf",
+      "slug": "noto-sans-mono",
+      "subfamily": "Regular",
+      "units_per_em": 1000,
+      "x_height_declared": 536,
+      "x_height_declared_permille": 536.0,
+      "x_height_measured": 536,
+      "x_height_measured_permille": 536.0
+    },
+    {
+      "cap_height_declared": 662,
+      "cap_height_measured": 662,
+      "codepoint_count": 1053,
+      "family": "TeX Gyre Termes",
+      "glyph_count": 1090,
+      "gpos_feature_count": 3,
+      "gsub_feature_count": 17,
+      "kern_pair_count": 11571,
+      "license": "GUST Font License (LPPL-derived)",
+      "os2_version": 3,
+      "outline_format": "CFF",
+      "slug": "tex-gyre-termes",
+      "subfamily": "Regular",
+      "units_per_em": 1000,
+      "x_height_declared": 450,
+      "x_height_declared_permille": 450.0,
+      "x_height_measured": 450,
+      "x_height_measured_permille": 450.0
+    },
+    {
+      "cap_height_declared": 683,
+      "cap_height_measured": 683,
+      "codepoint_count": 794,
+      "family": "Latin Modern Roman",
+      "glyph_count": 821,
+      "gpos_feature_count": 3,
+      "gsub_feature_count": 10,
+      "kern_pair_count": 9230,
+      "license": "GUST Font License (LPPL-derived)",
+      "os2_version": 3,
+      "outline_format": "CFF",
+      "slug": "latin-modern-roman-10",
+      "subfamily": "10 Regular",
+      "units_per_em": 1000,
+      "x_height_declared": 431,
+      "x_height_declared_permille": 431.0,
+      "x_height_measured": 431,
+      "x_height_measured_permille": 431.0
+    }
+  ],
+  "optical": {
+    "family": "Latin Modern Roman",
+    "license": "GUST Font License (LPPL-derived)",
+    "members": [
+      {
+        "advance_n": 750,
+        "advance_n_over_x_height": 1.7401,
+        "cap_height": 683,
+        "design_size": 5.0,
+        "design_size_decipoints": 50,
+        "file_bytes": 111872,
+        "file_name": "lmroman5-regular.otf",
+        "file_sha256": "954bd9c376597c7043e7b616430163e0158155edf7434fd70082cf8460c08533",
+        "range_end": 5.5,
+        "range_start": 3.0,
+        "units_per_em": 1000,
+        "word_width": 9928,
+        "word_width_over_x_height": 23.0348,
+        "x_height": 431,
+        "x_over_cap": 0.631
+      },
+      {
+        "advance_n": 676,
+        "advance_n_over_x_height": 1.5684,
+        "cap_height": 683,
+        "design_size": 6.0,
+        "design_size_decipoints": 60,
+        "file_bytes": 112212,
+        "file_name": "lmroman6-regular.otf",
+        "file_sha256": "501396c437f76c260b8724265b8495f318a640ee5a4674852ecbb20daf256696",
+        "range_end": 6.5,
+        "range_start": 5.5,
+        "units_per_em": 1000,
+        "word_width": 8908,
+        "word_width_over_x_height": 20.6682,
+        "x_height": 431,
+        "x_over_cap": 0.631
+      },
+      {
+        "advance_n": 631,
+        "advance_n_over_x_height": 1.464,
+        "cap_height": 683,
+        "design_size": 7.0,
+        "design_size_decipoints": 70,
+        "file_bytes": 110792,
+        "file_name": "lmroman7-regular.otf",
+        "file_sha256": "48c4b46ab255eec96588fb992fba1ed6102e53d051da480738a61cc6cdb328c3",
+        "range_end": 7.5,
+        "range_start": 6.5,
+        "units_per_em": 1000,
+        "word_width": 8295,
+        "word_width_over_x_height": 19.2459,
+        "x_height": 431,
+        "x_over_cap": 0.631
+      },
+      {
+        "advance_n": 590,
+        "advance_n_over_x_height": 1.3689,
+        "cap_height": 683,
+        "design_size": 8.0,
+        "design_size_decipoints": 80,
+        "file_bytes": 111948,
+        "file_name": "lmroman8-regular.otf",
+        "file_sha256": "f73015c3827596586faa380c398501caf9b5bcbb6f40b46af6a51277ca97c9fc",
+        "range_end": 8.5,
+        "range_start": 7.5,
+        "units_per_em": 1000,
+        "word_width": 7734,
+        "word_width_over_x_height": 17.9443,
+        "x_height": 431,
+        "x_over_cap": 0.631
+      },
+      {
+        "advance_n": 571,
+        "advance_n_over_x_height": 1.3248,
+        "cap_height": 683,
+        "design_size": 9.0,
+        "design_size_decipoints": 90,
+        "file_bytes": 112680,
+        "file_name": "lmroman9-regular.otf",
+        "file_sha256": "8ab7b017fc67ea0e30cbf9e7ebd940010442ea67b40cf65f87d73f3ca11b0e6f",
+        "range_end": 9.5,
+        "range_start": 8.5,
+        "units_per_em": 1000,
+        "word_width": 7486,
+        "word_width_over_x_height": 17.3689,
+        "x_height": 431,
+        "x_over_cap": 0.631
+      },
+      {
+        "advance_n": 556,
+        "advance_n_over_x_height": 1.29,
+        "cap_height": 683,
+        "design_size": 10.0,
+        "design_size_decipoints": 100,
+        "file_bytes": 111536,
+        "file_name": "lmroman10-regular.otf",
+        "file_sha256": "1aa18cfefa58132c52ce5de70db1fd1154201c19cd2b2cdaffba4906a33e6852",
+        "range_end": 11.0,
+        "range_start": 9.5,
+        "units_per_em": 1000,
+        "word_width": 7283,
+        "word_width_over_x_height": 16.8979,
+        "x_height": 431,
+        "x_over_cap": 0.631
+      },
+      {
+        "advance_n": 544,
+        "advance_n_over_x_height": 1.2622,
+        "cap_height": 683,
+        "design_size": 12.0,
+        "design_size_decipoints": 120,
+        "file_bytes": 110400,
+        "file_name": "lmroman12-regular.otf",
+        "file_sha256": "e6be218ae83e61aa8a29990d3cdc401c678c1962188cb9a4a8b6359e4f5e5870",
+        "range_end": 14.0,
+        "range_start": 11.0,
+        "units_per_em": 1000,
+        "word_width": 7134,
+        "word_width_over_x_height": 16.5522,
+        "x_height": 431,
+        "x_over_cap": 0.631
+      },
+      {
+        "advance_n": 511,
+        "advance_n_over_x_height": 1.1884,
+        "cap_height": 683,
+        "design_size": 17.2,
+        "design_size_decipoints": 172,
+        "file_bytes": 110248,
+        "file_name": "lmroman17-regular.otf",
+        "file_sha256": "ed048c80fb4b67663b80899b89fe5fba17d7442e1286d61fd08fe5689c6b7c3c",
+        "range_end": 24.0,
+        "range_start": 14.0,
+        "units_per_em": 1000,
+        "word_width": 6678,
+        "word_width_over_x_height": 15.5302,
+        "x_height": 430,
+        "x_over_cap": 0.6296
+      }
+    ]
+  },
+  "variable": [
+    {
+      "H_bbox": [
+        94,
+        0,
+        586,
+        693
+      ],
+      "axes": [
+        {
+          "default": 100.0,
+          "max": 100.0,
+          "min": 75.0,
+          "name": "Width",
+          "tag": "wdth"
+        },
+        {
+          "default": 400.0,
+          "max": 800.0,
+          "min": 100.0,
+          "name": "Weight",
+          "tag": "wght"
+        }
+      ],
+      "cap_height": 693,
+      "file_bytes": 1072960,
+      "file_name": "Ubuntu[wdth,wght].ttf",
+      "file_sha256": "28c4c189a44803b1986fd16074187034dc6d94ad35f5e87de13dd0e786b70b73",
+      "is_default_instance": false,
+      "location": {
+        "wght": 100
+      },
+      "slug": "ubuntu-variable",
+      "suffix": "thin",
+      "units_per_em": 1000,
+      "x_height": 513
+    },
+    {
+      "H_bbox": [
+        89,
+        0,
+        608,
+        693
+      ],
+      "axes": [
+        {
+          "default": 100.0,
+          "max": 100.0,
+          "min": 75.0,
+          "name": "Width",
+          "tag": "wdth"
+        },
+        {
+          "default": 400.0,
+          "max": 800.0,
+          "min": 100.0,
+          "name": "Weight",
+          "tag": "wght"
+        }
+      ],
+      "cap_height": 693,
+      "file_bytes": 1072960,
+      "file_name": "Ubuntu[wdth,wght].ttf",
+      "file_sha256": "28c4c189a44803b1986fd16074187034dc6d94ad35f5e87de13dd0e786b70b73",
+      "is_default_instance": true,
+      "location": {
+        "wght": 400
+      },
+      "slug": "ubuntu-variable",
+      "suffix": "regular",
+      "units_per_em": 1000,
+      "x_height": 518
+    },
+    {
+      "H_bbox": [
+        80,
+        0,
+        654,
+        693
+      ],
+      "axes": [
+        {
+          "default": 100.0,
+          "max": 100.0,
+          "min": 75.0,
+          "name": "Width",
+          "tag": "wdth"
+        },
+        {
+          "default": 400.0,
+          "max": 800.0,
+          "min": 100.0,
+          "name": "Weight",
+          "tag": "wght"
+        }
+      ],
+      "cap_height": 693,
+      "file_bytes": 1072960,
+      "file_name": "Ubuntu[wdth,wght].ttf",
+      "file_sha256": "28c4c189a44803b1986fd16074187034dc6d94ad35f5e87de13dd0e786b70b73",
+      "is_default_instance": false,
+      "location": {
+        "wght": 800
+      },
+      "slug": "ubuntu-variable",
+      "suffix": "bold",
+      "units_per_em": 1000,
+      "x_height": 526
+    },
+    {
+      "H_bbox": [
+        84,
+        0,
+        481,
+        693
+      ],
+      "axes": [
+        {
+          "default": 100.0,
+          "max": 100.0,
+          "min": 75.0,
+          "name": "Width",
+          "tag": "wdth"
+        },
+        {
+          "default": 400.0,
+          "max": 800.0,
+          "min": 100.0,
+          "name": "Weight",
+          "tag": "wght"
+        }
+      ],
+      "cap_height": 693,
+      "file_bytes": 1072960,
+      "file_name": "Ubuntu[wdth,wght].ttf",
+      "file_sha256": "28c4c189a44803b1986fd16074187034dc6d94ad35f5e87de13dd0e786b70b73",
+      "is_default_instance": false,
+      "location": {
+        "wdth": 75,
+        "wght": 400
+      },
+      "slug": "ubuntu-variable",
+      "suffix": "condensed",
+      "units_per_em": 1000,
+      "x_height": 522
+    }
+  ]
+}

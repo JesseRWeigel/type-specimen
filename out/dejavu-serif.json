@@ -1,0 +1,962 @@
+{
+  "coverage": {
+    "codepoint_count": 3447,
+    "ranges": [
+      [
+        32,
+        126
+      ],
+      [
+        160,
+        717
+      ],
+      [
+        720,
+        723
+      ],
+      [
+        726,
+        734
+      ],
+      [
+        736,
+        745
+      ],
+      [
+        748,
+        748
+      ],
+      [
+        750,
+        752
+      ],
+      [
+        755,
+        755
+      ],
+      [
+        759,
+        759
+      ],
+      [
+        768,
+        831
+      ],
+      [
+        835,
+        835
+      ],
+      [
+        847,
+        847
+      ],
+      [
+        856,
+        856
+      ],
+      [
+        864,
+        865
+      ],
+      [
+        880,
+        887
+      ],
+      [
+        890,
+        895
+      ],
+      [
+        900,
+        906
+      ],
+      [
+        908,
+        908
+      ],
+      [
+        910,
+        929
+      ],
+      [
+        931,
+        993
+      ],
+      [
+        1008,
+        1119
+      ],
+      [
+        1122,
+        1125
+      ],
+      [
+        1130,
+        1133
+      ],
+      [
+        1136,
+        1143
+      ],
+      [
+        1164,
+        1165
+      ],
+      [
+        1168,
+        1179
+      ],
+      [
+        1182,
+        1191
+      ],
+      [
+        1194,
+        1207
+      ],
+      [
+        1210,
+        1211
+      ],
+      [
+        1216,
+        1220
+      ],
+      [
+        1223,
+        1224
+      ],
+      [
+        1227,
+        1228
+      ],
+      [
+        1231,
+        1273
+      ],
+      [
+        1296,
+        1301
+      ],
+      [
+        1306,
+        1309
+      ],
+      [
+        1329,
+        1366
+      ],
+      [
+        1369,
+        1375
+      ],
+      [
+        1377,
+        1415
+      ],
+      [
+        1417,
+        1418
+      ],
+      [
+        3647,
+        3647
+      ],
+      [
+        4256,
+        4293
+      ],
+      [
+        4304,
+        4348
+      ],
+      [
+        7424,
+        7531
+      ],
+      [
+        7543,
+        7544
+      ],
+      [
+        7547,
+        7551
+      ],
+      [
+        7557,
+        7557
+      ],
+      [
+        7579,
+        7615
+      ],
+      [
+        7620,
+        7625
+      ],
+      [
+        7680,
+        7931
+      ],
+      [
+        7936,
+        7957
+      ],
+      [
+        7960,
+        7965
+      ],
+      [
+        7968,
+        8005
+      ],
+      [
+        8008,
+        8013
+      ],
+      [
+        8016,
+        8023
+      ],
+      [
+        8025,
+        8025
+      ],
+      [
+        8027,
+        8027
+      ],
+      [
+        8029,
+        8029
+      ],
+      [
+        8031,
+        8061
+      ],
+      [
+        8064,
+        8116
+      ],
+      [
+        8118,
+        8132
+      ],
+      [
+        8134,
+        8147
+      ],
+      [
+        8150,
+        8155
+      ],
+      [
+        8157,
+        8175
+      ],
+      [
+        8178,
+        8180
+      ],
+      [
+        8182,
+        8190
+      ],
+      [
+        8192,
+        8230
+      ],
+      [
+        8234,
+        8250
+      ],
+      [
+        8252,
+        8254
+      ],
+      [
+        8258,
+        8258
+      ],
+      [
+        8260,
+        8265
+      ],
+      [
+        8267,
+        8271
+      ],
+      [
+        8273,
+        8275
+      ],
+      [
+        8279,
+        8279
+      ],
+      [
+        8287,
+        8292
+      ],
+      [
+        8298,
+        8305
+      ],
+      [
+        8308,
+        8334
+      ],
+      [
+        8336,
+        8348
+      ],
+      [
+        8358,
+        8358
+      ],
+      [
+        8364,
+        8364
+      ],
+      [
+        8367,
+        8367
+      ],
+      [
+        8369,
+        8369
+      ],
+      [
+        8372,
+        8373
+      ],
+      [
+        8376,
+        8378
+      ],
+      [
+        8381,
+        8381
+      ],
+      [
+        8450,
+        8451
+      ],
+      [
+        8457,
+        8457
+      ],
+      [
+        8461,
+        8463
+      ],
+      [
+        8469,
+        8470
+      ],
+      [
+        8473,
+        8474
+      ],
+      [
+        8477,
+        8477
+      ],
+      [
+        8482,
+        8482
+      ],
+      [
+        8484,
+        8484
+      ],
+      [
+        8486,
+        8487
+      ],
+      [
+        8490,
+        8491
+      ],
+      [
+        8498,
+        8498
+      ],
+      [
+        8508,
+        8521
+      ],
+      [
+        8523,
+        8523
+      ],
+      [
+        8526,
+        8526
+      ],
+      [
+        8528,
+        8581
+      ],
+      [
+        8585,
+        8585
+      ],
+      [
+        8592,
+        8704
+      ],
+      [
+        8706,
+        8708
+      ],
+      [
+        8710,
+        8713
+      ],
+      [
+        8715,
+        8716
+      ],
+      [
+        8719,
+        8725
+      ],
+      [
+        8727,
+        8736
+      ],
+      [
+        8739,
+        8749
+      ],
+      [
+        8760,
+        8765
+      ],
+      [
+        8770,
+        8771
+      ],
+      [
+        8776,
+        8776
+      ],
+      [
+        8784,
+        8789
+      ],
+      [
+        8800,
+        8801
+      ],
+      [
+        8804,
+        8805
+      ],
+      [
+        8834,
+        8839
+      ],
+      [
+        8844,
+        8879
+      ],
+      [
+        8900,
+        8901
+      ],
+      [
+        8962,
+        8962
+      ],
+      [
+        8968,
+        8971
+      ],
+      [
+        8976,
+        8977
+      ],
+      [
+        8984,
+        8985
+      ],
+      [
+        8992,
+        8993
+      ],
+      [
+        8997,
+        8997
+      ],
+      [
+        9000,
+        9000
+      ],
+      [
+        9085,
+        9085
+      ],
+      [
+        9115,
+        9134
+      ],
+      [
+        9143,
+        9143
+      ],
+      [
+        9167,
+        9167
+      ],
+      [
+        9251,
+        9251
+      ],
+      [
+        9472,
+        9728
+      ],
+      [
+        9784,
+        9788
+      ],
+      [
+        9791,
+        9799
+      ],
+      [
+        9824,
+        9831
+      ],
+      [
+        9833,
+        9839
+      ],
+      [
+        10145,
+        10145
+      ],
+      [
+        10181,
+        10182
+      ],
+      [
+        10208,
+        10208
+      ],
+      [
+        10216,
+        10217
+      ],
+      [
+        10224,
+        10623
+      ],
+      [
+        10731,
+        10731
+      ],
+      [
+        10764,
+        10766
+      ],
+      [
+        10799,
+        10799
+      ],
+      [
+        10858,
+        10859
+      ],
+      [
+        11008,
+        11034
+      ],
+      [
+        11360,
+        11361
+      ],
+      [
+        11363,
+        11364
+      ],
+      [
+        11367,
+        11379
+      ],
+      [
+        11381,
+        11383
+      ],
+      [
+        11385,
+        11391
+      ],
+      [
+        11520,
+        11557
+      ],
+      [
+        11800,
+        11800
+      ],
+      [
+        11807,
+        11807
+      ],
+      [
+        11810,
+        11813
+      ],
+      [
+        11822,
+        11822
+      ],
+      [
+        42564,
+        42567
+      ],
+      [
+        42576,
+        42577
+      ],
+      [
+        42580,
+        42583
+      ],
+      [
+        42648,
+        42649
+      ],
+      [
+        42760,
+        42774
+      ],
+      [
+        42779,
+        42783
+      ],
+      [
+        42790,
+        42817
+      ],
+      [
+        42822,
+        42823
+      ],
+      [
+        42826,
+        42827
+      ],
+      [
+        42830,
+        42831
+      ],
+      [
+        42856,
+        42857
+      ],
+      [
+        42875,
+        42876
+      ],
+      [
+        42880,
+        42887
+      ],
+      [
+        42891,
+        42893
+      ],
+      [
+        42896,
+        42897
+      ],
+      [
+        42922,
+        42922
+      ],
+      [
+        43000,
+        43007
+      ],
+      [
+        62464,
+        62502
+      ],
+      [
+        62504,
+        62504
+      ],
+      [
+        63173,
+        63173
+      ],
+      [
+        63185,
+        63185
+      ],
+      [
+        63188,
+        63188
+      ],
+      [
+        64256,
+        64262
+      ],
+      [
+        65024,
+        65039
+      ],
+      [
+        65529,
+        65533
+      ],
+      [
+        119860,
+        119892
+      ],
+      [
+        119894,
+        119911
+      ],
+      [
+        120120,
+        120121
+      ],
+      [
+        120123,
+        120126
+      ],
+      [
+        120128,
+        120132
+      ],
+      [
+        120134,
+        120134
+      ],
+      [
+        120138,
+        120144
+      ],
+      [
+        120146,
+        120171
+      ],
+      [
+        120484,
+        120485
+      ],
+      [
+        120792,
+        120801
+      ]
+    ]
+  },
+  "declared": {
+    "cap_height": null,
+    "hhea_ascender": 1901,
+    "hhea_descender": -483,
+    "hhea_line_gap": 0,
+    "os2_version": 1,
+    "typo_ascender": 1556,
+    "typo_descender": -492,
+    "typo_line_gap": 410,
+    "units_per_em": 2048,
+    "win_ascent": 1901,
+    "win_descent": 483,
+    "x_height": null
+  },
+  "embedded_license": "Fonts are (c) Bitstream (see below). DejaVu changes are in public domain. Bitstream Vera Fonts Copyright ------------------------------ Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is a trademark of Bitstream, Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of the fonts accompanying this license (\"Fonts\") and associated documentation files (the \"Font Software\"), to reproduce and distribute the Font Software, including without limitation the rights to use, copy, merge, publish, distribute, and/or sell copies of the Font Software, and to permit persons to whom the Font Software is furnished to do so, subject to the following conditions: The above copyright and trademark notices and this permission notice shall be included in all copies of one or more of the Font Software typefaces. The Font Software may be modified, altered, or added to, and in particular the designs of glyphs or characters in the Fonts may be modified and additional glyphs or or characters may be added to the Fonts, only if the fonts are renamed to names not containing either the words \"Bitstream\" or the word \"Vera\". This License becomes null and void to the extent applicable to Fonts or Font Software that has been modified and is distributed under the \"Bitstream Vera\" names. The Font Software may be sold as part of a larger software package but no copy of one or more of the Font Software typefaces may be sold by itself. THE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE. Except as contained in this notice, the names of Gnome, the Gnome Foundation, and Bitstream Inc., shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Font Software without prior written authorization from the Gnome Foundation or Bitstream Inc., respectively. For further information, contact: fonts at gnome dot org.",
+  "embedded_license_url": "http://dejavu.sourceforge.net/wiki/index.php/License",
+  "family": "DejaVu Serif",
+  "features": {
+    "GPOS": [
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          2
+        ],
+        "tag": "kern"
+      },
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          4
+        ],
+        "tag": "mark"
+      },
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          6
+        ],
+        "tag": "mkmk"
+      }
+    ],
+    "GSUB": [
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          3
+        ],
+        "tag": "aalt"
+      },
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          1
+        ],
+        "tag": "case"
+      },
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          6
+        ],
+        "tag": "ccmp"
+      },
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          4
+        ],
+        "tag": "dlig"
+      },
+      {
+        "lookup_count": 2,
+        "lookup_types": [
+          4
+        ],
+        "tag": "liga"
+      },
+      {
+        "lookup_count": 2,
+        "lookup_types": [
+          1
+        ],
+        "tag": "locl"
+      },
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          3
+        ],
+        "tag": "salt"
+      },
+      {
+        "lookup_count": 1,
+        "lookup_types": [
+          3
+        ],
+        "tag": "ssty"
+      }
+    ]
+  },
+  "file_bytes": 380660,
+  "file_name": "DejaVuSerif.ttf",
+  "file_sha256": "8f2c103bfa3fd5de71f1b92b18f21906b5a26871fb7e19a9a4c9af539c3cc7ab",
+  "full_name": "DejaVu Serif",
+  "fvar": null,
+  "glyph_count": 3528,
+  "has_legacy_kern_table": true,
+  "instance": null,
+  "is_fixed_pitch": false,
+  "italic_angle": 0.0,
+  "kern_pair_count": 1367,
+  "license": "Bitstream Vera Fonts License, plus public domain additions (Arev)",
+  "license_file": "/usr/share/doc/fonts-dejavu-core/copyright",
+  "measured": {
+    "ascender": {
+      "available": true,
+      "bbox": [
+        59,
+        -29,
+        1208,
+        1556
+      ],
+      "exemplar": "b",
+      "glyph": "b",
+      "per_em": 0.7598,
+      "value": 1556
+    },
+    "cap_height": {
+      "available": true,
+      "bbox": [
+        113,
+        0,
+        1673,
+        1493
+      ],
+      "exemplar": "H",
+      "glyph": "H",
+      "per_em": 0.729,
+      "value": 1493
+    },
+    "descender": {
+      "available": true,
+      "bbox": [
+        59,
+        -426,
+        1208,
+        1092
+      ],
+      "exemplar": "p",
+      "glyph": "p",
+      "per_em": -0.208,
+      "value": -426
+    },
+    "figure_height": {
+      "available": true,
+      "bbox": [
+        250,
+        0,
+        1012,
+        1520
+      ],
+      "exemplar": "one",
+      "glyph": "one",
+      "per_em": 0.7422,
+      "value": 1520
+    },
+    "x_height": {
+      "available": true,
+      "bbox": [
+        25,
+        0,
+        1130,
+        1063
+      ],
+      "exemplar": "x",
+      "glyph": "x",
+      "per_em": 0.519,
+      "value": 1063
+    }
+  },
+  "outline_format": "glyf",
+  "package": "fonts-dejavu-core",
+  "postscript_name": "DejaVuSerif",
+  "scripts": {
+    "GPOS": [
+      "DFLT",
+      "cyrl",
+      "grek",
+      "latn",
+      "math"
+    ],
+    "GSUB": [
+      "DFLT",
+      "cyrl",
+      "grek",
+      "latn",
+      "math"
+    ]
+  },
+  "size_feature": null,
+  "slug": "dejavu-serif",
+  "subfamily": "Book",
+  "version": "Version 2.37"
+}

@@ -1,0 +1,109 @@
+{
+  "comment": [
+    "The fonts this repository's published specimens are built from. All are installed system",
+    "fonts on a Debian/Ubuntu box. No font binary is committed here, and none needs to be: the",
+    "specimen draws glyph outlines as SVG paths, so the published page carries drawn shapes",
+    "rather than a redistributable font file. The license column is the upstream license of each",
+    "family, with the on-disk copy of the license text named so the claim can be checked.",
+    "Install with: fonts-dejavu-core fonts-liberation fonts-lato fonts-ubuntu fonts-noto-mono",
+    "tex-gyre fonts-lmodern"
+  ],
+  "fonts": [
+    {
+      "slug": "dejavu-sans",
+      "path": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "package": "fonts-dejavu-core",
+      "license": "Bitstream Vera Fonts License, plus public domain additions (Arev)",
+      "license_file": "/usr/share/doc/fonts-dejavu-core/copyright",
+      "redistributable": true,
+      "why": "The widest coverage on the box, and an OS/2 table too old to carry x-height."
+    },
+    {
+      "slug": "dejavu-serif",
+      "path": "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
+      "package": "fonts-dejavu-core",
+      "license": "Bitstream Vera Fonts License, plus public domain additions (Arev)",
+      "license_file": "/usr/share/doc/fonts-dejavu-core/copyright",
+      "redistributable": true,
+      "why": "Same metric gap as the sans, different shapes."
+    },
+    {
+      "slug": "liberation-serif",
+      "path": "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
+      "package": "fonts-liberation",
+      "license": "SIL Open Font License 1.1",
+      "license_file": "/usr/share/doc/fonts-liberation/copyright",
+      "redistributable": true,
+      "why": "Metric-compatible with Times New Roman, and declares its metrics properly."
+    },
+    {
+      "slug": "lato",
+      "path": "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
+      "package": "fonts-lato",
+      "license": "SIL Open Font License 1.1",
+      "license_file": "/usr/share/doc/fonts-lato/copyright",
+      "redistributable": true,
+      "why": "Twenty GSUB features, most of them plain substitutions, so most demos run."
+    },
+    {
+      "slug": "ubuntu-variable",
+      "path": "/usr/share/fonts/truetype/ubuntu/Ubuntu[wdth,wght].ttf",
+      "package": "fonts-ubuntu",
+      "license": "Ubuntu Font Licence 1.0",
+      "license_file": "/usr/share/doc/fonts-ubuntu/copyright",
+      "redistributable": true,
+      "why": "A variable font with weight and width axes, drawn at three instances."
+    },
+    {
+      "slug": "noto-sans-mono",
+      "path": "/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf",
+      "package": "fonts-noto-mono",
+      "license": "SIL Open Font License 1.1",
+      "license_file": "/usr/share/doc/fonts-noto-mono/copyright",
+      "redistributable": true,
+      "why": "Monospaced, and declares no kerning at all, which the specimen has to say."
+    },
+    {
+      "slug": "tex-gyre-termes",
+      "path": "/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-regular.otf",
+      "package": "tex-gyre",
+      "license": "GUST Font License (LPPL-derived)",
+      "license_file": "/usr/share/doc/tex-gyre/copyright",
+      "redistributable": true,
+      "why": "CFF outlines rather than glyf, and sixteen GSUB features."
+    },
+    {
+      "slug": "latin-modern-roman-10",
+      "path": "/usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf",
+      "package": "fonts-lmodern",
+      "license": "GUST Font License (LPPL-derived)",
+      "license_file": "/usr/share/doc/fonts-lmodern/copyright",
+      "redistributable": true,
+      "why": "Carries a GPOS size feature, which is where optical size is actually recorded."
+    }
+  ],
+  "variable_instances": {
+    "ubuntu-variable": [
+      {"suffix": "thin", "location": {"wght": 100}},
+      {"suffix": "regular", "location": {"wght": 400}},
+      {"suffix": "bold", "location": {"wght": 800}},
+      {"suffix": "condensed", "location": {"wdth": 75, "wght": 400}}
+    ]
+  },
+  "optical_family": {
+    "name": "Latin Modern Roman",
+    "package": "fonts-lmodern",
+    "license": "GUST Font License (LPPL-derived)",
+    "license_file": "/usr/share/doc/fonts-lmodern/copyright",
+    "members": [
+      "/usr/share/texmf/fonts/opentype/public/lm/lmroman5-regular.otf",
+      "/usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf",
+      "/usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf",
+      "/usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf",
+      "/usr/share/texmf/fonts/opentype/public/lm/lmroman9-regular.otf",
+      "/usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf",
+      "/usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf",
+      "/usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf"
+    ]
+  }
+}
