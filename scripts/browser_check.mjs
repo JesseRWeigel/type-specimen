@@ -10,7 +10,7 @@
 
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { createRequire } from "node:module";
-import { dirname, join, resolve } from "node:path";
+import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -75,7 +75,9 @@ if (!version) {
   console.error("chromium reported no version, so this is not a working browser");
   process.exit(2);
 }
-ok(`chromium ${version} launched from ${pwDir.replace(REPO, ".")}`);
+// Reported relative to this repository. An absolute path here would put somebody's home
+// directory into the pasted verify output, and from there into the README.
+ok(`chromium ${version} launched from ${relative(REPO, pwDir)}`);
 
 const summary = JSON.parse(readFileSync(join(REPO, "out", "_index.json"), "utf8"));
 const context = await browser.newContext();

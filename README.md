@@ -209,7 +209,124 @@ named.
 
 ## Status
 
-VERIFY-OUTPUT-GOES-HERE
+`bash scripts/verify.sh`, run from a clean shell:
+
+```
+0. environment
+        Python 3.12.3
+        node v24.13.0
+        fontTools 4.62.1
+  ok    python3, node and fontTools present
+
+1. the fonts this repository describes are on this machine
+        8 fonts and 8 optical sizes present, with their license text on disk
+  ok    every configured font and license file is present
+
+2. unit suite
+  ok    26 tests passed, each with a negative control that failed as it must; 0 failed
+
+3. the committed pages match a fresh build
+        built 8 specimens into docs/ and facts into out/
+  ok    docs/ and out/ are exactly what the generator produces now
+
+4. determinism, two independent builds compared byte for byte
+  ok    18 files, 4021291 bytes, identical across two runs
+
+5. every fact re-derived from the font bytes, independently
+        ok    dejavu-sans  30 facts re-derived from the font's bytes, all matching
+        ok    dejavu-serif  30 facts re-derived from the font's bytes, all matching
+        ok    latin-modern-roman-10  35 facts re-derived from the font's bytes, all matching
+        ok    lato  30 facts re-derived from the font's bytes, all matching
+        ok    liberation-serif  30 facts re-derived from the font's bytes, all matching
+        ok    noto-sans-mono  30 facts re-derived from the font's bytes, all matching
+        ok    tex-gyre-termes  35 facts re-derived from the font's bytes, all matching
+        ok    ubuntu-variable  30 facts re-derived from the font's bytes, all matching
+        ok    cross-font studies  54 facts re-derived from the fonts' bytes, all matching
+        304 facts re-derived independently across 8 fonts plus the cross-font studies
+                NOT CHECKED  ubuntu-variable instance thin at {'wght': 100}: this checker does not interpolate gvar deltas, so its x-height and cap height are NOT independently confirmed
+                NOT CHECKED  ubuntu-variable instance bold at {'wght': 800}: this checker does not interpolate gvar deltas, so its x-height and cap height are NOT independently confirmed
+                NOT CHECKED  ubuntu-variable instance condensed at {'wdth': 75, 'wght': 400}: this checker does not interpolate gvar deltas, so its x-height and cap height are NOT independently confirmed
+  ok    304 facts re-derived independently across 8 fonts plus the cross-font studies
+
+6. the checker really is independent, proved by import graph
+        checker entry     checkers/check_font_facts.py
+          reaches 1 file(s) in this repo: checkers/check_font_facts.py
+          external modules: hashlib, json, os, struct, sys
+        generator entry   typespec/cli.py
+          reaches 5 file(s) in this repo
+          external modules: __future__, argparse, fontTools, hashlib, json, os, sys, xml
+        ok    the checker shares no code with the generator, and the two read the font by different means
+  ok    no shared code between generator and checker
+
+7. a real browser
+        ok    chromium 145.0.7632.6 launched from ../a11y-sweep/node_modules/playwright-core
+        ok    index.html loads and identifies itself
+        ok    the index carries every font's measured x-height and codepoint count (8 fonts)
+        ok    4 table cells say "absent" for the 2 fonts whose OS/2 table is too old to carry x-height
+        ok    lato.html loads and identifies itself
+        ok    249 glyph paths drawn, 41715 path commands, tallest 173px
+        ok    the waterfall rises across 9 rows, 8px to 59px on screen
+        ok    the diagram's rules sit in the right order and carry the checked values (cap 1433, x-height 1013)
+        ok    at 1280px nothing escapes the page and the body does not scroll sideways
+        ok    at 390px nothing escapes the page and the body does not scroll sideways
+        ok    12 of 26 scroll containers hold content wider than a 390px viewport, reachable by scrolling that box
+        ok    16 internal links all resolve to files that exist
+        ok    3 requests, all file: or data:, so the pages need no network
+  ok    13 browser checks passed, 0 failed
+
+8. the generator points at a font it was not configured for
+        wrote /tmp/tmp.ukJIqwd633/adhoc.html for DejaVu Sans Mono (3322 codepoints, 3377 glyphs)
+        an unconfigured font produced 185 outlines, x-height 1120, 3322 codepoints, all matching the file
+  ok    it works on any font file, not only the eight
+
+9. sabotage
+        baseline fingerprint be322b66026544c0
+        x-height-measured-from-X     output be322b66026544c0 -> ee0811d35a23f23b, suite exit 1, checker exit 1
+            FAIL  test_measured_metrics_come_from_the_named_exemplar: AssertionError: DejaVuSans.ttf x_height
+                  x_height: the generator says 1493, the outline of 'x' gives 1120
+  ok    sabotage "x-height-measured-from-X" is caught
+        absent-os2-field-filled-in   output be322b66026544c0 -> 9025a643edebdb20, suite exit 1, checker exit 1
+            FAIL  test_absent_os2_fields_are_reported_absent: AssertionError: 
+                  OS/2 sxHeight: the generator says 1064, the bytes say None
+  ok    sabotage "absent-os2-field-filled-in" is caught
+        design-size-divided-twice    output be322b66026544c0 -> 49adcab7364819f7, suite exit 1, checker exit 1
+            FAIL  test_size_feature_is_not_divided_twice: AssertionError: {'design_size': 1.0, 'subfamily_id': 1, 'range_start':
+                  size feature design_size in points: the generator says 1.0, the bytes say 10.0
+  ok    sabotage "design-size-divided-twice" is caught
+        coverage-claims-solid-ranges output be322b66026544c0 -> 1f753f861d074dba, suite exit 1, checker exit 1
+            FAIL  test_coverage_matches_the_cmap: AssertionError: DejaVuSans.ttf: 122630 claimed but absent, 0 present but uncla
+                  cmap codepoint count: the generator says 128548, the bytes say 5918
+  ok    sabotage "coverage-claims-solid-ranges" is caught
+        kerning-silently-dropped     output be322b66026544c0 -> db5a3bc2f11b28ba, suite exit 1, checker exit 0
+            FAIL  test_kerning_actually_moves_glyphs: AssertionError: ('/usr/share/fonts/truetype/liberation/LiberationSerif-Reg
+                  NOT CHECKED  ubuntu-variable instance thin at {'wght': 100}: this checker does not interpolate gvar deltas, so
+  ok    sabotage "kerning-silently-dropped" is caught
+        unimplemented-lookup-hidden  output be322b66026544c0 -> 31515903bbe176b1, suite exit 1, checker exit 0
+            FAIL  test_unimplemented_lookup_types_are_reported: AssertionError: no font here exercises an unimplemented lookup t
+                  NOT CHECKED  ubuntu-variable instance thin at {'wght': 100}: this checker does not interpolate gvar deltas, so
+  ok    sabotage "unimplemented-lookup-hidden" is caught
+        feature-demo-shows-after-twice output be322b66026544c0 -> a658849030098fa6, suite exit 1, checker exit 0
+            FAIL  test_feature_demo_shows_two_different_runs: AssertionError: the before and after runs are identical
+                  NOT CHECKED  ubuntu-variable instance thin at {'wght': 100}: this checker does not interpolate gvar deltas, so
+  ok    sabotage "feature-demo-shows-after-twice" is caught
+
+10. hygiene
+  ok    this directory is its own git repository
+  ok    no absolute home paths in tracked files
+  ok    no credential-shaped strings
+        37 tracked files, none containing a NUL byte, so the secret scan above read all of them
+  ok    the secret scan was not blinded by a binary file
+  ok    no font binaries committed, so no redistribution question arises
+  ok    no tracked file over a megabyte
+  ok    no overflow-x: hidden anywhere, so the browser probe means something
+
+    the README is a claim like any other
+        Status section present with VERIFY OK, test count 26 matches, and every x-height in the README's table matches the independently checked facts
+  ok    the README states what actually happened
+
+24 passed, 0 failed
+VERIFY OK
+```
 
 ## What is not done
 
