@@ -694,6 +694,16 @@ def glyph_bbox(sfnt, gid):
     raise Unsupported("no glyf, CFF or CFF2 table")
 
 
+def _close(mine, theirs, relative=1e-9):
+    """Relative comparison for floating-point values.
+
+    A fixed epsilon means one thing at 0.6 and something else entirely at 750, so the tolerance
+    scales with the magnitude of the value being checked.
+    """
+    scale = max(abs(mine), abs(theirs), 1.0)
+    return abs(mine - theirs) <= relative * scale
+
+
 class Unsupported(Exception):
     """Raised where this checker genuinely cannot derive a value.
 
@@ -765,12 +775,15 @@ def check_one(facts_path):
             problems.append(f"{measure}: the generator reports it unavailable, but the outline "
                             f"of {char!r} has a bounding box")
             continue
+        # Both derivations produce whole font units, so this is exact equality rather than a
+        # tolerance. An absolute slack of a unit or two would be a place for a real disagreement
+        # to hide, and measured across every font here the two agree to the unit already.
         mine = int(round(box[EDGE[measure]]))
-        if abs(mine - claim["value"]) > 1:
+        if mine != claim["value"]:
             problems.append(f"{measure}: the generator says {claim['value']}, "
                             f"the outline of {char!r} gives {mine}")
         mine_box = [int(round(v)) for v in box]
-        if max(abs(a - b) for a, b in zip(mine_box, claim["bbox"])) > 1:
+        if mine_box != list(claim["bbox"]):
             problems.append(f"{measure}: bounding box {claim['bbox']} from the generator, "
                             f"{mine_box} from the outline")
         checks += 1
@@ -802,8 +815,10 @@ def check_one(facts_path):
                     raw_size["range_end"], claim["raw_decipoints"]["range_end"])
             # Points are decipoints over ten. A generator that divides twice fails here.
             for key in ("design_size", "range_start", "range_end"):
-                compare(f"size feature {key} in points",
-                        raw_size[key] / 10.0, claim[key])
+                checks += 1
+                if not _close(raw_size[key] / 10.0, claim[key]):
+                    problems.append(f"size feature {key} in points: the generator says "
+                                    f"{claim[key]}, the bytes give {raw_size[key] / 10.0}")
 
     compare("file size in bytes", os.path.getsize(path), facts["file_bytes"])
 
@@ -877,7 +892,7 @@ def check_index(index_path):
             box = glyph_bbox(sfnt, cmap[ord(char)])
             mine = int(round(box[edge]))
             checks += 1
-            if abs(mine - member[measure]) > 1:
+            if mine != member[measure]:
                 problems.append(f"{member['file_name']} {measure}: generator says "
                                 f"{member[measure]}, the outline gives {mine}")
         checks += 1
@@ -899,8 +914,10 @@ def check_index(index_path):
                             f"{member['design_size']}, the bytes give {expected_points}")
         # The ratios the page draws a conclusion from, recomputed rather than trusted.
         checks += 1
+        # The one genuinely floating-point comparison here, so the tolerance is RELATIVE to the
+        # value rather than a fixed number of units.
         ratio = round(member["x_height"] / member["cap_height"], 4)
-        if abs(ratio - member["x_over_cap"]) > 1e-4:
+        if not _close(ratio, member["x_over_cap"]):
             problems.append(f"{member['file_name']} x/cap: generator says "
                             f"{member['x_over_cap']}, the parts give {ratio}")
 
@@ -927,7 +944,7 @@ def check_index(index_path):
             box = glyph_bbox(sfnt, cmap[ord(char)])
             mine = int(round(box[edge]))
             checks += 1
-            if abs(mine - inst[measure]) > 1:
+            if mine != inst[measure]:
                 problems.append(f"{inst['suffix']} {measure}: generator says {inst[measure]}, "
                                 f"the default-instance outline gives {mine}")
     return {"checks": checks, "problems": problems, "unchecked": unchecked}

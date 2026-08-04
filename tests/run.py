@@ -482,6 +482,42 @@ def nc_feature_demo_shows_two_different_runs():
     assert paths[0] != paths[1], "the before and after runs are identical"
 
 
+def test_tolerances_are_relative_not_absolute():
+    """Float comparisons in the checker scale with the value.
+
+    A fixed epsilon means one thing at 0.63 and something else at 750, so the same comparator
+    would be strict on ratios and slack on advance widths, or the reverse.
+    """
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "check_font_facts_for_test", os.path.join(REPO, "checkers", "check_font_facts.py"))
+    checker = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(checker)
+    close = checker._close
+    # The same proportional error is judged the same way at both magnitudes.
+    assert close(0.6310, 0.6310 * (1 + 1e-12))
+    assert close(750.0, 750.0 * (1 + 1e-12))
+    assert not close(0.6310, 0.6310 * (1 + 1e-6))
+    assert not close(750.0, 750.0 * (1 + 1e-6))
+    # And the checker source carries no fixed-epsilon or fixed-unit slack.
+    source = read(os.path.join(REPO, "checkers", "check_font_facts.py"))
+    import re
+    leftovers = re.findall(r"(?:abs\([^)]*\)|\bmax\(abs[^)]*\)\)?)\s*>\s*(?:1e-\d+|\d+)\b",
+                           source)
+    assert not leftovers, f"absolute tolerances remain in the checker: {leftovers}"
+
+
+def nc_tolerances_are_relative_not_absolute():
+    """A fixed-epsilon comparator must fail the scaling property.
+
+    At 0.631 an epsilon of 1e-4 waves through a relative error 1000x larger than it would allow
+    at 750, which is exactly the slack a relative tolerance removes.
+    """
+    def fixed(mine, theirs):
+        return abs(mine - theirs) <= 1e-4
+    assert not fixed(0.6310, 0.6310 * (1 + 1e-6))
+
+
 def test_charset_only_draws_characters_the_font_has():
     html = specimen.Specimen(LM10, facts(LM10)).charset()
     lm_cmap = font(LM10).getBestCmap()

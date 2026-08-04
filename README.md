@@ -67,7 +67,7 @@ higher on the body. Half of that is true here:
 The width claim holds and is large: the 5 pt face sets the same word 48% wider relative to its
 own x-height than the 17.2 pt face, and `n` is 750 units against 511. The vertical claim does not
 hold at all. x-height is 431 units per 1000 at every size from 5 to 12, and 430 at 17.2, so the
-ratio to cap height moves by one part in a thousand across the whole family. Latin Modern's
+ratio to cap height moves by 0.1% across the whole family. Latin Modern's
 optical sizes change width and stroke weight and leave the vertical proportions alone.
 
 ## A bug this found, and now tests against
@@ -155,7 +155,7 @@ the second half the claim would be vacuous.
 Ubuntu instances away from the default location print `NOT CHECKED` with the reason. The
 default-location instance is checked against the raw `glyf` outline.
 
-**Every test has a negative control.** 26 tests, each paired with a deliberately wrong version of
+**Every test has a negative control.** 27 tests, each paired with a deliberately wrong version of
 the same situation that the test must reject. A test whose negative control passes is reported as
 a failure, because it has not been shown capable of failing.
 
@@ -223,7 +223,7 @@ named.
   ok    every configured font and license file is present
 
 2. unit suite
-  ok    26 tests passed, each with a negative control that failed as it must; 0 failed
+  ok    27 tests passed, each with a negative control that failed as it must; 0 failed
 
 3. the committed pages match a fresh build
         built 8 specimens into docs/ and facts into out/
@@ -275,7 +275,7 @@ named.
   ok    13 browser checks passed, 0 failed
 
 8. the generator points at a font it was not configured for
-        wrote /tmp/tmp.ukJIqwd633/adhoc.html for DejaVu Sans Mono (3322 codepoints, 3377 glyphs)
+        wrote /tmp/tmp.y8bNvjdY7f/adhoc.html for DejaVu Sans Mono (3322 codepoints, 3377 glyphs)
         an unconfigured font produced 185 outlines, x-height 1120, 3322 codepoints, all matching the file
   ok    it works on any font file, not only the eight
 
@@ -291,7 +291,7 @@ named.
   ok    sabotage "absent-os2-field-filled-in" is caught
         design-size-divided-twice    output be322b66026544c0 -> 49adcab7364819f7, suite exit 1, checker exit 1
             FAIL  test_size_feature_is_not_divided_twice: AssertionError: {'design_size': 1.0, 'subfamily_id': 1, 'range_start':
-                  size feature design_size in points: the generator says 1.0, the bytes say 10.0
+                  size feature design_size in points: the generator says 1.0, the bytes give 10.0
   ok    sabotage "design-size-divided-twice" is caught
         coverage-claims-solid-ranges output be322b66026544c0 -> 1f753f861d074dba, suite exit 1, checker exit 1
             FAIL  test_coverage_matches_the_cmap: AssertionError: DejaVuSans.ttf: 122630 claimed but absent, 0 present but uncla
@@ -316,15 +316,16 @@ named.
   ok    no credential-shaped strings
         37 tracked files, none containing a NUL byte, so the secret scan above read all of them
   ok    the secret scan was not blinded by a binary file
+  ok    no reference to the private catalog repository or to a home path
   ok    no font binaries committed, so no redistribution question arises
   ok    no tracked file over a megabyte
   ok    no overflow-x: hidden anywhere, so the browser probe means something
 
     the README is a claim like any other
-        Status section present with VERIFY OK, test count 26 matches, and every x-height in the README's table matches the independently checked facts
+        Status section present with VERIFY OK, test count 27 matches, and every x-height in the README's table matches the independently checked facts
   ok    the README states what actually happened
 
-24 passed, 0 failed
+25 passed, 0 failed
 VERIFY OK
 ```
 

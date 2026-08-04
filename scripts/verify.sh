@@ -289,6 +289,15 @@ PY
     sed 's/^/        /' "$TMP/nul.log"; ok "the secret scan was not blinded by a binary file"
   else bad "$(cat "$TMP/nul.log")"; fi
 
+  # This project is extracted from a PRIVATE catalog repository. A tracked reference to it, or
+  # to a path inside somebody's home directory, would leak that it exists and where it lives.
+  # A tilde path slips past a grep for the expanded home directory, so all three forms are checked.
+  leak=$(git -C "$ROOT" grep -InE 'thousand|/home/[a-z]|~/Projects' -- . 2>/dev/null \
+         | grep -v '^scripts/verify.sh' || true)
+  if [ -z "$leak" ]; then ok "no reference to the private catalog repository or to a home path"
+  else bad "a private-repo or home-directory reference is tracked"
+       printf '%s\n' "$leak" | head -4 | sed 's/^/        /'; fi
+
   fonts=$(git -C "$ROOT" ls-files | grep -iE '\.(ttf|otf|ttc|woff2?|pfb|pfa|dfont)$' || true)
   if [ -z "$fonts" ]; then ok "no font binaries committed, so no redistribution question arises"
   else bad "font binaries are tracked"; printf '%s\n' "$fonts" | head -4 | sed 's/^/        /'; fi
