@@ -4,6 +4,10 @@ Point it at a font file and it produces a full specimen sheet: waterfall, metric
 running text, character set, Unicode coverage map, the font's own strongest kerning pairs, and a
 demo of every OpenType feature the font declares.
 
+> Measurements described here were taken on one development machine: an RTX 5090 with
+> 32 GB of VRAM, 12 cores, 48 GB of RAM, running Linux under WSL2. Numbers from your own
+> hardware will differ.
+
 **[Eight specimens, from eight real fonts](https://jesserweigel.github.io/type-specimen/)**
 
 ```bash
@@ -218,7 +222,7 @@ named.
         fontTools 4.62.1
   ok    python3, node and fontTools present
 
-1. the fonts this repository describes are on this machine
+1. the fonts this repository describes are on the development machine
         8 fonts and 8 optical sizes present, with their license text on disk
   ok    every configured font and license file is present
 
